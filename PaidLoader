@@ -3,7 +3,7 @@ loadstring([[
     
     for i,v in next, getgc() do
         if type(v) == "function" and islclosure(v) and not isexecutorclosure(v) and getinfo(v).source:find("PlayerModule.LocalScript") then
-            local const = table.find(getconstants(v), 4000001);
+            local const = table.find(getconstants(v), 1);
             
             if const then
                 setconstant(v, const, 1); -- fuck off
